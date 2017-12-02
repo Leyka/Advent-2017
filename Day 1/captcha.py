@@ -1,3 +1,6 @@
+# Day 1: Inverse Captcha
+# http://adventofcode.com/2017/day/1
+
 def compare(data, index_to_compare):
     total = 0
     for index, value in enumerate(data):

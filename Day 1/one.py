@@ -5,8 +5,7 @@ def compare(data, index_to_compare):
             total += int(value)
     return total 
 
-def main(): 
-
+def main():
     with open('input.txt', 'r') as file: 
         data = file.read()
         # Part one

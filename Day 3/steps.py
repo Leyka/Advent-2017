@@ -12,7 +12,7 @@ def main():
     radius = floor(diameter/2)
 
     # Every time the diameter gets bigger we update the reference
-    reference = (diameter - 2)**2 # Reference = the square on the hot bottom right corner
+    reference = (diameter - 2)**2 # Reference = Square number on the bottom right corner
     index_in_paquet = abs(size - (reference+radius))
 
     steps = radius + index_in_paquet % packet_size

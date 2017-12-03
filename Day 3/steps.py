@@ -15,7 +15,7 @@ def main():
     reference = (diameter - 2)**2 # Reference = Square number on the bottom right corner
     index_in_packet = abs(size - (reference+radius))
 
-    steps = radius + index_in_paquet % packet_size
+    steps = radius + index_in_packet % packet_size
     print('Part one: '+ str(steps))
 
 if __name__ == '__main__': 

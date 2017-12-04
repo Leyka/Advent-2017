@@ -3,7 +3,6 @@
 
 def check_unique_passphrases(words, check_anagrams=False): 
     unique_words = []
-    valid = True
     for word in words:
         # Part two
         if check_anagrams:
@@ -11,9 +10,8 @@ def check_unique_passphrases(words, check_anagrams=False):
         if word not in unique_words:
             unique_words.append(word)
         else:
-            valid = False
-            break
-    return valid
+            return False
+    return True
 
 def main():
     total_one = 0
@@ -21,7 +19,7 @@ def main():
     with open('input.txt', 'r') as file: 
         for row in file: 
             words = row.split()
-            total_one +=  check_unique_passphrases(words)
+            total_one += check_unique_passphrases(words)
             total_two += check_unique_passphrases(words, True)
     print('Part one: ' + str(total_one))
     print('Part two: ' + str(total_two))
